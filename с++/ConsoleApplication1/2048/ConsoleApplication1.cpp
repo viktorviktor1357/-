@@ -16,7 +16,7 @@ int matrix[6][6] = {
     {0, 0, 0, 0, 0, 0 },
 };
 
-int random() 
+int random1() 
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -156,10 +156,10 @@ void spawn(int n) {
     int a1, a2;
     for (int i = 0; i < n;)
     {
-        a1 = random(), a2 = random();
+        a1 = random1(), a2 = random1();
         if (matrix[a1][a2] != 0)
         {
-            a1 = random(), a2 = random();
+            a1 = random1(), a2 = random1();
             continue;
         }
         else
